@@ -1,0 +1,29 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.51"
+}
+
+subprojects {
+    apply plugin: "org.jetbrains.kotlin.jvm"
+
+    repositories {
+        mavenCentral()
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src'
+            }
+        }
+            
+        test {
+            java {
+                srcDir 'test'
+            }
+        }
+    }
+
+    dependencies {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    }    
+}
